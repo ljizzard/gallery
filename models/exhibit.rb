@@ -1,0 +1,37 @@
+require_relative ("../db/sql_runner")
+
+class Exhibit
+
+  attr_reader( :id, :title, :image )
+
+
+  def initialize(options)
+    @id = options["id"].to_i if options["id"]
+    @title = options["title"]
+    @image = options["image"]
+  end
+
+  def save()
+      sql = "INSERT INTO exhibits
+      (title, image)
+      VALUES
+      ($1, $2)
+      RETURNING id"
+      values = [@title, @image]
+      results = SqlRunner.run(sql, values)
+      @id = results.first()['id'].to_i
+  end
+
+  def self.all()
+      sql = "SELECT * FROM exhibits"
+      results = SqlRunner.run( sql )
+      return results.map { |exhibit| Exhibit.new( exhibit ) }
+  end
+
+  def self.delete_all
+      sql = "DELETE FROM exhibits"
+      SqlRunner.run( sql )
+  end
+
+
+end
