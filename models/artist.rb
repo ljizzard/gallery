@@ -36,5 +36,8 @@ class Artist
       SqlRunner.run( sql )
   end
 
+  def self.map_items(artist_data)
+      return artist_data.map { |artist| Artist.new(artist) }
+  end
 
 end

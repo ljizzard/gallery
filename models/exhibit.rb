@@ -36,6 +36,22 @@ class Exhibit
     return Exhibit.new( results.first )
   end
 
+  def update()
+      sql = "UPDATE exhibits
+      SET
+      (
+        title,
+        image
+      ) =
+      (
+        $1, $2
+      )
+      WHERE id = $3"
+      values = [@title, @image, @id]
+      SqlRunner.run(sql, values)
+  end
+
+
   def self.delete_all
       sql = "DELETE FROM exhibits"
       SqlRunner.run( sql )
