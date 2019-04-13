@@ -21,6 +21,6 @@ CREATE TABLE exhibits(
 
 CREATE TABLE category(
   id SERIAL PRIMARY KEY,
-  artists_id INT REFERENCES artists(id),
-  exhibits_id INT REFERENCES exhibits(id)
+  artists_id INT REFERENCES artists(id) ON DELETE CASCADE,
+  exhibits_id INT REFERENCES exhibits(id) ON DELETE CASCADE
 );

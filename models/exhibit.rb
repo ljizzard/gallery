@@ -51,7 +51,13 @@ class Exhibit
       SqlRunner.run(sql, values)
   end
 
-
+  def artists
+    sql = "SELECT artist.* FROM artists INNER JOIN exhibits ON artist_id WHERE exhibit_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |artist| Victim.new(victim) }
+  end
+  
   def self.delete_all
       sql = "DELETE FROM exhibits"
       SqlRunner.run( sql )
