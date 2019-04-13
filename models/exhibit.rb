@@ -28,6 +28,14 @@ class Exhibit
       return results.map { |exhibit| Exhibit.new( exhibit ) }
   end
 
+
+  def self.find( id )
+    sql = "SELECT * FROM exhibits WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Exhibit.new( results.first )
+  end
+
   def self.delete_all
       sql = "DELETE FROM exhibits"
       SqlRunner.run( sql )

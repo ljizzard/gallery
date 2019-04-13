@@ -3,18 +3,30 @@ require_relative ("../models/exhibit.rb")
 require_relative ("..models/category.rb")
 require ("pry-byebug")
 
+Artist.delete_all()
+Category.delete_all()
+Exhibit.delete_all()
+
 
 artist1 = Artist.new({
   "name" => "Alison King",
-  "biography" => "Alison King:  Textile artist Alison King trained at Edinburgh College of Art, originally as a painter. She discovered a passion for textiles through many years of teaching. Alison has exhibited extensively and her work has been collected both in the UK and abroad."})
+  "biography" => "Alison King:  Textile artist Alison King trained at Edinburgh College of Art,
+   originally as a painter. She discovered a passion for textiles through many years of teaching.
+    Alison has exhibited extensively and her work has been collected both in the UK and abroad."
+    })
 
 artist2 = Artist.new({
   "name" => "Nick Hanson",
-  "biography" => "Nick Hudson: Nick Hanson. Nick is a multi-award winning landscape photographer with over 15 years of experience behind the lens. He was an award winning Landscape Photographer of the Year in 2015 and 2016. Nick considers Skye to be one of the best locations in the world for photography."})
+  "biography" => "Nick Hudson: Nick Hanson. Nick is a multi-award winning landscape photographer
+   with over 15 years of experience behind the lens.
+   He was an award winning Landscape Photographer of the Year in 2015 and 2016.
+   Nick considers Skye to be one of the best locations in the world for photography."})
 
 artist3 = Artist.new({
   "name" => "Charles Steuart",
-  "biography" => "Charles Steuart: Charles Steuart (1838–1907) was a prolific English still life and landscape painter who exhibited widely throughout the British Isles. He was active from 1854 to 1904."})
+  "biography" => "Charles Steuart: Charles Steuart (1838–1907) was a prolific English still life
+   and landscape painter who exhibited widely throughout the British Isles.
+   He was active from 1854 to 1904."})
 
 artist1.save
 artist2.save
@@ -58,5 +70,5 @@ category1.save
 category2.save
 category3.save
 
-binding.pry
-nil
+# binding.pry
+# nil

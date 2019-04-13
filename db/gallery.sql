@@ -6,7 +6,7 @@ DROP TABLE exhibits;
 CREATE TABLE artists(
 id SERIAL PRIMARY KEY,
 name VARCHAR,
-bio TEXT
+biography TEXT
 );
 
 

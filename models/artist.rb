@@ -18,9 +18,7 @@ class Artist
         biography
       )
       VALUES
-      (
-        $1, $2
-      )
+      ($1, $2)
       RETURNING id"
       values = [@name, @biography]
       results = SqlRunner.run(sql, values)
@@ -32,7 +30,7 @@ class Artist
       results = SqlRunner.run( sql )
       return results.map { |artist| Artist.new( artist ) }
   end
-  
+
   def self.delete_all
       sql = "DELETE FROM artists"
       SqlRunner.run( sql )
