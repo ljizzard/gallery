@@ -8,7 +8,17 @@ get '/artists' do
   erb ( :"artists/index" )
 end
 
+get '/artists/new' do
+  @artists = Artist.all
+  erb(:"artists/new")
+end
+
 get '/artists/:id' do
   @artists = Artist.find(params['id'].to_i)
-  erb( :"artists/show" )
+  erb( :"artists/show")
+end
+
+post '/artists' do
+  Artist.new(params).save
+  redirect to '/artists'
 end

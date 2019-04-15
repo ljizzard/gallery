@@ -10,7 +10,7 @@ end
 
 get '/exhibits/new' do
   @exhibits = Exhibit.all
-  erb(:new)
+  erb(:"exhibits/new")
 end
 
 get '/exhibits/:id' do
