@@ -1,4 +1,4 @@
-DROP TABLE category;
+DROP TABLE artex;
 DROP TABLE artists;
 DROP TABLE exhibits;
 
@@ -9,18 +9,15 @@ name VARCHAR,
 biography TEXT
 );
 
-
 CREATE TABLE exhibits(
   id SERIAL PRIMARY KEY,
   title VARCHAR,
-  photo TEXT, -- url
+  image TEXT, -- url
   category VARCHAR
 );
 
-
-
-CREATE TABLE category(
+CREATE TABLE artex(
   id SERIAL PRIMARY KEY,
-  artists_id INT REFERENCES artists(id) ON DELETE CASCADE,
-  exhibits_id INT REFERENCES exhibits(id) ON DELETE CASCADE
+  artist_id INT REFERENCES artists(id) ON DELETE CASCADE,
+  exhibit_id INT REFERENCES exhibits(id) ON DELETE CASCADE
 );

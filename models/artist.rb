@@ -2,13 +2,14 @@ require_relative ("../db/sql_runner")
 
 class Artist
 
-  attr_reader( :id, :name, :biography )
+  attr_reader( :id, :name, :biography, :exhibit_id )
 
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @name = options["name"]
     @biography = options["biography"]
+    @exhibit_id = options["exhibit"]
   end
 
   def save()

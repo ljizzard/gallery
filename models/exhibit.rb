@@ -52,16 +52,17 @@ class Exhibit
   end
 
   def artists
-    sql = "SELECT artist.* FROM artists INNER JOIN exhibits ON artist_id WHERE exhibit_id = $1;"
+    sql = "SELECT exhibit.* FROM exhibits
+    INNER JOIN artist ON exhibit.exhibit_id = artist.id WHERE exhibit_id = $1"
     values = [@id]
     results = SqlRunner.run(sql, values)
-    return results.map { |artist| Victim.new(victim) }
+    return results.map { |artist| Artist.new(artist) }
   end
   
+# SELECT z.* FROM zombies z INNER JOIN bitings b ON b.zombie_id = z.id WHERE b.victim_id = $1;
   def self.delete_all
       sql = "DELETE FROM exhibits"
       SqlRunner.run( sql )
   end
-
 
 end

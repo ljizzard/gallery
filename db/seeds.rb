@@ -1,10 +1,10 @@
 require_relative ("../models/artist.rb")
 require_relative ("../models/exhibit.rb")
-require_relative ("..models/category.rb")
+require_relative ("../models/artex.rb")
 require ("pry-byebug")
 
 Artist.delete_all()
-Category.delete_all()
+Artex.delete_all()
 Exhibit.delete_all()
 
 
@@ -32,7 +32,7 @@ artist3 = Artist.new({
    and landscape painter who exhibited widely throughout the British Isles.
    He was active from 1854 to 1904.'})
 
-artist3.save   
+artist3.save
 
 
 
@@ -58,20 +58,46 @@ exhibit2.save
 exhibit3.save
 exhibit4.save
 
+artex1 = Artex.new({
+  "artist_id" => artist1.id,
+  "exhibit_id" => exhibit1.id
+})
+
+artex2 = Artex.new({
+  "artist_id" => artist1.id,
+  "exhibit_id" => exhibit2.id
+  })
+
+artex3 = Artex.new({
+  "artist_id" => artist2.id,
+  "exhibit_id" => exhibit3.id
+  })
+
+artex4 = Artex.new({
+  "artist_id" => artist3.id,
+  "exhibit_id" => exhibit4.id
+  })
+
+artex1.save()
+artex2.save()
+artex3.save()
+artex4.save()
 
 
-category1 = Category.new({
-  'category' => 'photography'})
 
-category2 = Category.new({
-  'category' => 'textile'})
-
-category3 = Category.new({
-  'category' => 'painting'})
-
-category1.save
-category2.save
-category3.save
+#
+# category1 = Category.new({
+#   'category' => 'photography'})
+#
+# category2 = Category.new({
+#   'category' => 'textile'})
+#
+# category3 = Category.new({
+#   'category' => 'painting'})
+#
+# category1.save
+# category2.save
+# category3.save
 
 # binding.pry
 # nil

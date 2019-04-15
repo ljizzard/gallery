@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glasgow Gallery</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Special+Elite" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
+</head>
+<body>
+<main class="flex flex--row">
+  <nav>
+    <ul>
+      <li>
+        <a href="/artists">Artists</a>
+      </li>
+      <li>
+        <a href="/exhibits">Exhibits</a>
+      </li>
+      <!-- <li>
+        <a href="/categories">Categories</a>
+      </li> -->
+    </ul>
+  </nav>
+  <section id="content">
+  <%= yield %>
+  </section>
+  </main>
+</body>
+</html>
