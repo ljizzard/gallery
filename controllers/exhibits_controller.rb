@@ -21,18 +21,20 @@ get '/exhibits/:id' do
   erb( :"exhibits/show" )
 end
 
-# TODO: this should call a form to update an existing exhbit
-get '/exhibits/:id/update' do
+#  this calls a form to update an existing exhbit
+get '/exhibits/:id/edit' do
   @exhibits = Exhibit.find(params['id'])
   erb(:"exhibits/edit")
 end
 
 
-post '/exhibits/:id/update' do
+post '/exhibits/:id' do
   @exhibit = Exhibit.new(params)
-  @exhibit.update()
+  @exhibit.edit()
   redirect to "/exhibits"
 end
+
+
 
 # This route is called when we select delete on a exhibit
 post '/exhibits/:id/delete' do

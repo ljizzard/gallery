@@ -6,5 +6,23 @@
   Image link (if required)
   <input type="text" image ="url"><br>
 
-  <input type="submit" value="Confirm Edit">
+
+</form>
+<form method="GET" action="/exhibit/<%= @exhibit.id %>">
+  <label for="title">Title</label>
+  <input
+  type="text"
+  name="title"
+  value="<%= @exhibit.title %>"
+  />
+
+  <label for="last-name-field">Last Name:</label>
+  <input
+  type="text"
+  name="image"
+  value="<%= @exhibit.image %>"
+  />
+
+
+  <input type='submit' value="Confirm Edit">
 </form>
