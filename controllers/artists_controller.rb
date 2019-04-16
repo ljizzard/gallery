@@ -15,7 +15,7 @@ get '/artists/new' do
   erb(:"artists/new")
 end
 
-# TODO: this route should show a single artist
+# this route shows a single artist
 get '/artists/:id' do
   @artist = Artist.find(params['id'].to_i)
   erb( :"artists/show")

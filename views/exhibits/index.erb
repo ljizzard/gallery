@@ -8,10 +8,14 @@
   <% for exhibit in @exhibits %>
   <tr>
     <td><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title %></a></td>
+  <td>
+    <form action="/exhibits/<%= exhibit.id %>/delete" method="POST">
+      <button type=“submit” value="POST"> delete </button>
+    </form>
+  </td>
   </tr>
+  <a href="/exhibits/<%= exhibit.id %>/update">Edit Exhibit</a>
   <% end %>
 </table>
 
 <a href="/exhibits/new">New Exhibit</a>
-<a href="/exhibits/edit">Edit Exhibit</a>
-<a href="/exhibits/delete">Delete Exhibit</a>

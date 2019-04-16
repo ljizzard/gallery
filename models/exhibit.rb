@@ -2,7 +2,7 @@ require_relative ("../db/sql_runner")
 
 class Exhibit
 
-  attr_reader( :id, :title, :image )
+  attr_accessor :id, :title, :image
 
 
   def initialize(options)
@@ -28,8 +28,7 @@ class Exhibit
       return results.map { |exhibit| Exhibit.new( exhibit ) }
   end
 
-
-  def self.find( id )
+  def Exhibit.find(id)
     sql = "SELECT * FROM exhibits WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
@@ -65,11 +64,14 @@ class Exhibit
     values = [@id]
     SqlRunner.run(sql, values)
   end
-  
+
 
   def self.delete_all
       sql = "DELETE FROM exhibits"
       SqlRunner.run( sql )
   end
 
+  def self.map_items(exhibit_data)
+      return exhibit_data.map { |exhibit| Exhibit.new(exhibit) }
+  end
 end

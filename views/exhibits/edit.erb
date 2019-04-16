@@ -1,16 +1,10 @@
-<h1>Edit <%= @exhibits.format_name %></h1>
-<form method="POST" action="/exhibits/<%= @exhibit.id %>">
-  <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="title">Title:</label>
-      <input type="text" name="Title" value="<%= @exhibit.title %>"/>
-    </div>
+<form action="/exhibits"  method ="post">
 
+  Exhibit title:
+  <input type="text" name="title"><br>
+  Image link (if required)
+  <input type="text" image ="url"><br>
 
-    <div class="form-el">
-      <input type="submit" value="Confirm Edit"/>
-    </div>
-
-  </div>
+  <input type="submit" value="Confirm Edit">
 </form>
