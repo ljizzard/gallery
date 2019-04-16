@@ -17,7 +17,7 @@ get '/artex/new' do
   erb(:"artex/new")
 end
 
-post '/bitings' do
+post '/artex' do
   artex = Artex.new(params)
   artex.save
   redirect to("/artex")

@@ -1,16 +1,19 @@
 <h1>Artists</h1>
 
 <table>
+
   <tr>
     <th>Name</th>
     <th></th>
-    <th>Biography</th>
+    <!-- <th>Biography</th> -->
   </tr>
   <% for artist in @artists %>
   <tr>
     <td><a href="/artists/<%= artist.id %>"><%= artist.name %></a></td>
-    <td>|</td>
-    <td><%= artist.biography %></td>
+    <td>
+    <form action="/artists/<%= artist.id %>/delete" method="POST">
+      <button type=“submit” value="POST"> delete </button>
+   </form> </td>
   </tr>
   <% end %>
 </table>

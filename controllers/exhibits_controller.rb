@@ -22,3 +22,14 @@ post '/exhibits' do
   Exhibit.new(params).save
   redirect to '/exhibits'
 end
+
+get '/exhibits:id/edit' do
+  @exhibits = Exhibit.find(params['id'])
+  erb(:"exhibits/edit")
+end
+
+post '/exhibits/:id' do
+  exhibit = Exhibit.new(params)
+  exhibit.update
+  redirect to "/exhibits/#{params['id']}"
+end

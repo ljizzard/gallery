@@ -2,7 +2,8 @@ require_relative ("../db/sql_runner")
 
 class Artist
 
-  attr_reader( :id, :name, :biography, :exhibit_id )
+  attr_accessor :name, :biography, :exhibit_id, :id
+
 
 
   def initialize(options)
@@ -30,6 +31,21 @@ class Artist
       sql = "SELECT * FROM artists"
       results = SqlRunner.run( sql )
       return results.map { |artist| Artist.new( artist ) }
+  end
+
+  def Artist.find( id )
+      sql = "SELECT * FROM artists
+      WHERE id = $1"
+      values = [id]
+      results = SqlRunner.run( sql, values)
+      return Artist.new(results.first)
+  end
+
+  def delete()
+    sql = "DELETE FROM artists
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
   def self.delete_all
