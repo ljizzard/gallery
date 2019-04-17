@@ -1,14 +1,14 @@
 
 <form action="/exhibits"  method ="post">
 
-  Exhibit title:
+  <!-- New Exhibit title:
   <input type="text" name="title"><br>
   Image link (if required)
-  <input type="text" image ="url"><br>
+  <input type="text" image ="url"><br> -->
 
 
 </form>
-<form method="GET" action="/exhibit/<%= @exhibit.id %>">
+<form method="GET" action="/exhibit/<%=@exhibit.id%>">
   <label for="title">Title</label>
   <input
   type="text"
@@ -16,7 +16,6 @@
   value="<%= @exhibit.title %>"
   />
 
-  <label for="last-name-field">Last Name:</label>
   <input
   type="text"
   name="image"

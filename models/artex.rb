@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Artex
 
-  attr_reader( :artist_id, :exhibit_id, :id )
+  attr_accessor( :artist_id, :exhibit_id, :id )
 
   def initialize(options)
     @id = options['id'].to_i if options['id']

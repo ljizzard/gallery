@@ -17,8 +17,17 @@ get '/artex/new' do
   erb(:"artex/new")
 end
 
+
+get '/artex/add' do
+   @artists = Artist.all()
+   @exhibits = Exhibit.all()
+   erb(:"artex/new")
+end
+
+
+
 post '/artex' do
   artex = Artex.new(params)
   artex.save
-  redirect to("/artex")
+  redirect to("/exhibits")
 end

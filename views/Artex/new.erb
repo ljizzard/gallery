@@ -1,0 +1,23 @@
+<form class="" action="/artex" method ="POST">
+
+  <label for="exhibit">Select exhibit</label>
+  <select  name="id" required>
+    <option value="">select</option>
+    <% @exhibits.each do |exhibit| %>
+    <option value=<%=exhibit.id%>><%=exhibit.title%></option>
+    <%end%>
+  </select>
+  
+  <label for="artist">Select artist</label>
+  <select  title="id" required>
+    <option value="">select</option>
+    <% @artists.each do |artist| %>
+    <option value=<%=artist.id%>><%=artist.name%></option>
+    <%end%>
+  </select>
+
+  <input type="submit" value="Save">
+  </form>
+
+
+</form>

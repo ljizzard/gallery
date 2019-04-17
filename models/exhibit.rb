@@ -35,7 +35,7 @@ class Exhibit
     return Exhibit.new( results.first )
   end
 
-  def update()
+  def edit()
       sql = "UPDATE exhibits
       SET
       (

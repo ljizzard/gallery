@@ -23,7 +23,7 @@ end
 
 #  this calls a form to update an existing exhbit
 get '/exhibits/:id/edit' do
-  @exhibits = Exhibit.find(params['id'])
+  @exhibit = Exhibit.find(params['id'].to_i)
   erb(:"exhibits/edit")
 end
 

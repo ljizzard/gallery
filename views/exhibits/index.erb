@@ -1,6 +1,7 @@
 <h1>Exhibits</h1>
 
 <a href="/exhibits/new">New Exhibit</a>
+<a href="/artex/add">Assign</a>
 
 <table>
   <tr>
@@ -14,9 +15,11 @@
     <form action="/exhibits/<%= exhibit.id %>/delete" method="POST">
       <button type=“submit” value="POST"> delete </button>
     </form>
+    <form action="/exhibits/<%= exhibit.id %>/edit" method="GET">
+      <button type="submit" value="GET"> edit </button>
+    </form>
   </td>
   </tr>
 
   <% end %>
 </table>
-<a href="/exhibits/<%= exhibit.id %>/update">Edit Exhibit</a>
