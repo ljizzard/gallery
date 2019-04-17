@@ -17,7 +17,7 @@ end
 
 # # TODO: this route should show a single exhibit
 get '/exhibits/:id' do
-  @exhibits = Exhibit.find(params['id'].to_i)
+  @exhibit = Exhibit.find(params['id'].to_i)
   erb( :"exhibits/show" )
 end
 

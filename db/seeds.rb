@@ -38,16 +38,16 @@ artist3.save
 
 exhibit1 = Exhibit.new({
   'title' => 'Witchlight (2015)',
-  'image' => 'http://20l3mn1zmx9s4a5tc319h94dzc4-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/Alison-King-Witchlight-2015-100cms-x-60cms-embellihed-fabric-paper-paint-and-stitch.jpg'})
+  'image' => 'Alison-King-Witchlight-2015-100cms-x-60cms-embellihed-fabric-paper-paint-and-stitch'})
 
 
 exhibit2 = Exhibit.new({
   'title' => 'Beyond the River the Heather Burns (2012)',
-  'image' => 'https://20l3mn1zmx9s4a5tc319h94dzc4-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/Alison-King-Beyond-the-River-the-Heather-Burns-2012-100cmsx100cms-approx-feltfabricand-machine-stitch-540x521.jpg'})
+  'image' => 'Alison-King-Beyond-the-River-the-Heather-Burns-2012-100cmsx100cms-approx-feltfabricand-machine-stitch-540x521.jpg'})
 
 exhibit3 = Exhibit.new({
   'title'=> 'Glamaig Reflection (2017)',
-  'image' => 'https://www.google.com/imgres?imgurl=http://static1.squarespace.com/static/5af176f312b13f5ce97cb86f/5af197e78a922d77836c0cb4/5af19988f950b790add45597/1528903264775/?format%3D1000w&imgrefurl=https://www.nickhanson.co.uk/isle-of-skye/glamaig-reflection&h=667&w=1000&tbnid=oYNsH4UMGyBSsM&q=nick+hanson+photography&tbnh=99&tbnw=149&usg=AI4_-kTrDxeV-Art4oXap-fANsySX7NJlg&vet=1&docid=GEtSKpB3N8vs3M&itg=1&sa=X&ved=2ahUKEwiW27jaxsrhAhUK1RoKHaWXCtAQ_h0wDHoECAsQCA#h=667&imgdii=oYNsH4UMGyBSsM:&tbnh=99&tbnw=149&vet=1&w=1000'})
+  'image' => 'glamaig-isle-of-skye-1'})
 
 exhibit4 = Exhibit.new({
   'title' => 'Waterfall (1765)',
