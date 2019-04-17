@@ -27,10 +27,14 @@ artist2.save
 
 
 artist3 = Artist.new({
-  'name' => 'Charles Steuart',
-  'biography' => 'Charles Steuart: Charles Steuart (1838–1907) was a prolific English still life
-   and landscape painter who exhibited widely throughout the British Isles.
-   He was active from 1854 to 1904.'})
+  'name' => 'The Embroiderers Guild',
+  'biography' => "The Embroiderers Guild: The Embroiderers Guild exists to build awareness of
+  stitch and textile art. We educate, encourage, inspire, and promote the achievement of excellence.
+   Members are encouraged to participate in any area of interest at any level, whether young people
+   learning to stitch, a professional artist extending the boundaries of textile art, or someone who
+    simply appreciates fabric and thread. We believe that textiles are as relevant today as they have
+     ever been, and there is a place for both the traditional, fine hand stitching alongside the bold
+      and contemporary machine work." })
 
 artist3.save
 
@@ -38,20 +42,20 @@ artist3.save
 
 exhibit1 = Exhibit.new({
   'title' => 'Witchlight (2015)',
-  'image' => 'Alison-King-Witchlight-2015-100cms-x-60cms-embellihed-fabric-paper-paint-and-stitch'})
+  'image' => '/images/Alison-King-Witchlight-2015-100cms-x-60cms-embellihed-fabric-paper-paint-and-stitch.jpg'})
 
 
 exhibit2 = Exhibit.new({
   'title' => 'Beyond the River the Heather Burns (2012)',
-  'image' => 'Alison-King-Beyond-the-River-the-Heather-Burns-2012-100cmsx100cms-approx-feltfabricand-machine-stitch-540x521.jpg'})
+  'image' => '/images/Alison-King-Beyond-the-River-the-Heather-Burns-2012-100cmsx100cms-approx-feltfabricand-machine-stitch-540x521.jpg'})
 
 exhibit3 = Exhibit.new({
   'title'=> 'Glamaig Reflection (2017)',
-  'image' => 'glamaig-isle-of-skye-1'})
+  'image' => '/images/glamaig-isle-of-skye-1.jpg'})
 
 exhibit4 = Exhibit.new({
-  'title' => 'Waterfall (1765)',
-  'image' => 'https://www.gla.ac.uk/media/media_240738_en.jpg'})
+  'title' => 'The Hardhome Embroidery (2018)',
+  'image' => '/images/whitewalkerfirst2.jpg'})
 
 exhibit1.save
 exhibit2.save
