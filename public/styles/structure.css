@@ -15,13 +15,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5em;
   color: black;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding-left: 15px;
   width: 399;
 }
 
 a, a:link, a:visited {
   color: darkgrey;
+  padding-right: 15px;
 }
 
 th {
