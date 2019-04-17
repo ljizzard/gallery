@@ -27,7 +27,6 @@ end
 
 
 post '/artex' do
-  artex = Artex.new(params)
-  artex.save
-  redirect to("/exhibits")
+  Artex.new(params).save
+  redirect to "/exhibits"
 end
